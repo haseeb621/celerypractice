@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ol>
+            <li><a href="{% url 'Add' %}">Add</a></li>
+            <li><a href="{% url 'Subtract' %}">Subtract</a></li>
+        </ol>
+    </nav>
+
+    <h1>Home Page</h1>
+
+ 
+ {% if result %}
+  <h5>Task ID:{{result.task_id}}</h5>
+  <h5>Task Result:{{result.result}}</h5>
+  <h5>Task Status:{{result.status}}</h5>
+ {% endif %}
+  
+</body>
+</html>
